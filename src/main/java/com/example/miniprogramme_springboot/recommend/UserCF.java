@@ -17,8 +17,8 @@ import org.apache.mahout.cf.taste.similarity.UserSimilarity;
 
 public class UserCF {
 
-    final static int NEIGHBORHOOD_NUM = 2;
-    final static int RECOMMENDER_NUM = 3;
+    final static int NEIGHBORHOOD_NUM = 3;
+    final static int RECOMMENDER_NUM = 5;
 
     public static void main(String[] args) throws IOException, TasteException {
         String file = "src/main/resources/dataset/rating.csv";
