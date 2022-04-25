@@ -69,12 +69,12 @@ public class Similarity {
         //返回类似度
         return (vectorProduct/(vector1Modulo*vector2Modulo));
     }
-    public boolean delUseless(String value){
-        Pattern pattern = Pattern.compile("^\\pN");
-        Matcher isNum = pattern.matcher(value);
-        if(isNum.find()){
-            return true;
-        }else
-            return false;
-    }
+//    public boolean delUseless(String value){
+//        Pattern pattern = Pattern.compile("^\\pN");
+//        Matcher isNum = pattern.matcher(value);
+//        if(isNum.find()){
+//            return true;
+//        }else
+//            return false;
+//    }
 }

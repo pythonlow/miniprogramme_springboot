@@ -44,30 +44,31 @@ public class ItemCB {
 
             //STEP 5: Extract data from result set
             ArrayList[] result=new ArrayList[2];//暂存每条数据分词后的结果，用于传入计算类似度
+            ArrayList[] simresult = new ArrayList[7];//暂存每条数据相似度
             int k=0;
             while(rs.next()){
                 //Retrieve by column name
                 String type = (rs.getString("type")!=null ) ? rs.getString("type") : " ";
                 String title = (rs.getString("title")!=null) ? rs.getString("title") : " ";
                 String author =(rs.getString("author")!=null)? rs.getString("author"): " " ;
-//                author.concat(title);
-//                String translator=rs.getString("translator")!=null ? rs.getString("translator") : " " ;
-//                translator.concat(author);
                 String publisher=rs.getString("publisher")!=null ? rs.getString("publisher"): " ";
-//                publisher.concat(translator);
                 String comment = rs.getString("comment")!=null ? rs.getString("comment"):" ";
-//                comment.concat(publisher);
-//                String handle = rs.getString("tag")!=null ? rs.getString("tag") : " ";
-//                handle.concat(comment);
-//                System.out.println(handle);
                 String translator=rs.getString("translator")!=null ? rs.getString("translator") : " " ;
                 String handle = rs.getString("tag").concat(comment).concat(author).concat(translator).concat(title).concat(publisher).concat(type);
                 //Display values
+//                String handle = rs.getString("author");
                 sw.splitWord(handle);
                 result[k]=sw.splitWordtoArr(handle);
                 k++;
             }
             System.out.println(sim.getSimilarDegree(result[0],result[1]));//计算类似度
+//                while(rs.next()){
+//                    String author =(rs.getString("author")!=null)? rs.getString("author"): " ";
+//                    sw.splitWord(author);
+//                    result[k] =sw.splitWordtoArr(author);
+//                    k++;
+//                    simresult[k]=sim.getSimilarDegree(result[])
+//                }
             //STEP 6: Clean-up environment
             rs.close();
             stmt.close();

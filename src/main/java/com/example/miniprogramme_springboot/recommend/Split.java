@@ -20,9 +20,9 @@ public class Split {
         TokenStream ts = analyzer.tokenStream("", reader);
         CharTermAttribute term=ts.getAttribute(CharTermAttribute.class);
         while(ts.incrementToken()){
-            if(!sim.delUseless(term.toString())){
-                System.out.print(term.toString() + "|");
-            }
+//            if(!sim.delUseless(term.toString())){
+                System.out.print(term + "|");
+//            }
         }
         System.out.println();
         analyzer.close();
@@ -37,9 +37,9 @@ public class Split {
         TokenStream ts = analyzer.tokenStream("", reader);
         CharTermAttribute term=ts.getAttribute(CharTermAttribute.class);
         while(ts.incrementToken()){
-            if(!sim.delUseless(term.toString())){
+//            if(!sim.delUseless(term.toString())){
                 List.add(term.toString());
-            }
+
         }
         analyzer.close();
         reader.close();

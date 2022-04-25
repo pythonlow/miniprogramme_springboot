@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface ShoppingcarService {
     List<Shoppingcar> getshoppingcar();
+
+//    List<Shoppingcar> recommendBook();
 }

@@ -22,4 +22,6 @@ public interface ShoppingcarMapper {
     int insertSelective(Shoppingcar record);
 
     List getshoppingcar();
+
+//    List recommendBook();
 }

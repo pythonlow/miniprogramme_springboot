@@ -1,18 +1,10 @@
 package com.example.miniprogramme_springboot.domain;
 
 public class Shoppingcar {
-
-
     private Integer id;
     private Integer bId;
-
-
-
     private Book book;
-
     private Integer uId;
-
-
     private Integer amount;
 
 
