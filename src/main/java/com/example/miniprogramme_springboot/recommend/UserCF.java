@@ -30,7 +30,7 @@ public class UserCF {
         NearestNUserNeighborhood neighbor = new NearestNUserNeighborhood(NEIGHBORHOOD_NUM, user, model);
         //用于基于用户相似度的推荐方法中，推荐的内容是基于找到与当前用户喜好相似的邻居用户的方式产生
         Recommender r = new GenericUserBasedRecommender(model, neighbor, user);
-        //推荐引擎的抽象接口，Taste中的核心组件,实现类包括两个，分别实现基于用户相似度的推荐引擎或者基于内容的推荐引擎
+        //推荐引擎的抽象接口，Taste中的核心组件
         LongPrimitiveIterator iter = model.getUserIDs();
 
         while (iter.hasNext()) {

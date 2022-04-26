@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class ShoppingcarServiceimpl implements ShoppingcarService {
@@ -18,6 +19,12 @@ public class ShoppingcarServiceimpl implements ShoppingcarService {
     public List<Shoppingcar> getshoppingcar(){
         return shoppingcarMapper.getshoppingcar();
     }
+
+    @Override
+    public Integer getrecommendBook(Map<Integer,Double> simList) {
+        return shoppingcarMapper.getrecommendBook(simList);
+    }
+
 
 //    @Override
 //    public List<Shoppingcar> recommendBook() { return shoppingcarMapper.recommendBook();

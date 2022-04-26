@@ -39,6 +39,7 @@ public class ItemCB {
             stmt = conn.createStatement();
             String sql;
 //            sql = "SELECT count(*) FROM recipe_copy";
+
             sql="SELECT `title`,`author`,`translator`,`publisher`,`comment`,`type`,`tag` FROM `books` WHERE `id`=009 OR `id`=010";
             ResultSet rs = stmt.executeQuery(sql);
 

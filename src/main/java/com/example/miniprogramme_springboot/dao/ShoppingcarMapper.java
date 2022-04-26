@@ -1,8 +1,10 @@
 package com.example.miniprogramme_springboot.dao;
 
 import com.example.miniprogramme_springboot.domain.Shoppingcar;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 
 public interface ShoppingcarMapper {
     /**
@@ -22,6 +24,7 @@ public interface ShoppingcarMapper {
     int insertSelective(Shoppingcar record);
 
     List getshoppingcar();
+    Integer getrecommendBook(@Param(value = "simList")Map<Integer, Double> simList);
 
 //    List recommendBook();
 }

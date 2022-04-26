@@ -22,11 +22,6 @@ public class BooksController {
 
     @RequestMapping(value = "/getrecommendBook", method = RequestMethod.GET)
     public Object getrecommendBook(@RequestParam("params") int[] params) {
-//        String bid = req.getParameter("bid");
-//        return booksService.getrecommendBook(Integer.parseInt(bid));
-//        for(int param :params){
-//                System.out.println(param);
-//        }
         System.out.println(Arrays.toString(params));
         return booksService.getrecommendBook(params);
     }
