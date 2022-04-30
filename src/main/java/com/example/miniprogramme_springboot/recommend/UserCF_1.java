@@ -1,9 +1,5 @@
 package com.example.miniprogramme_springboot.recommend;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
-
 import org.apache.mahout.cf.taste.common.TasteException;
 import org.apache.mahout.cf.taste.impl.common.LongPrimitiveIterator;
 import org.apache.mahout.cf.taste.impl.model.file.FileDataModel;
@@ -15,12 +11,18 @@ import org.apache.mahout.cf.taste.recommender.RecommendedItem;
 import org.apache.mahout.cf.taste.recommender.Recommender;
 import org.apache.mahout.cf.taste.similarity.UserSimilarity;
 
-public class UserCF {
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
+public class UserCF_1 {
     final static int NEIGHBORHOOD_NUM = 20;
     final static int RECOMMENDER_NUM = 10;
 
-    public static void main(String[] args) throws IOException, TasteException {
+    public Map<Long,Float> getusercf(int id) throws IOException, TasteException {
+        Map<Long,Float> usercflist = new HashMap<>();
         String file = "src/main/resources/dataset/rating.csv";
         //文件前三列必须为用户id、物品id、评分
         DataModel model = new FileDataModel(new File(file));
@@ -34,14 +36,24 @@ public class UserCF {
         LongPrimitiveIterator iter = model.getUserIDs();
         while (iter.hasNext()) {
             long uid = iter.nextLong();
-            List<RecommendedItem> list = r.recommend(uid, RECOMMENDER_NUM);
-
-                System.out.printf("uid:%s", uid);
+            if(uid==id) {
+                List<RecommendedItem> list = r.recommend(uid, RECOMMENDER_NUM);
+//                System.out.printf("uid:%s", uid);
                 for (RecommendedItem ritem : list) {
-                    System.out.printf("(%s,%f)", ritem.getItemID(), ritem.getValue());
+                    usercflist.put(ritem.getItemID(),ritem.getValue());
+//                    System.out.printf("(%s,%f)", ritem.getItemID(), ritem.getValue());
                 }
-
+            }
 //            System.out.println();
         }
+//        System.out.println(usercflist);
+        return usercflist;
     }
+//    public static void main(String[] args) throws IOException, TasteException {
+//        UserCF_1.usercf(1);
+//    }
+
 }
+
+
+

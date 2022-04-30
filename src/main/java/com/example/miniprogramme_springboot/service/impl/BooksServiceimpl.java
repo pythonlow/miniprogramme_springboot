@@ -18,21 +18,19 @@ public class BooksServiceimpl implements BooksService {
         return booksMapper.getBook();
     }
 
-
-
-//    @Override
-//    public List<Books> getrecommendBook() {
-//        return booksMapper.getrecommendBook();
-//    }
     @Override
     public List<Books> getrecommendBook(int[] params) {
-//        List<Books> books=new List<Books>();
-        System.out.println("impl"+ Arrays.toString(params));
-
-
         return booksMapper.getrecommendBook(params);
     }
 
+    @Override
+    public List<Books> getBookById(int params) {return booksMapper.getBookById(params);
+    }
+
+//    @Override
+//    public Integer getrecommendBookById(Map<Integer, Double> simList) {
+//        return booksMapper.getrecommendBookById(simList);
+//    }
 
 
 //    public List<Books> getcommendBook() {return booksMapper.getrecommendBook();}

@@ -28,7 +28,6 @@ public class ShoppingcarController {
         Map<Integer,Double>simList= cb.getItemCB(params);
         System.out.println(simList);
         return shoppingcarService.getrecommendBook(simList);
-
     }
 
 

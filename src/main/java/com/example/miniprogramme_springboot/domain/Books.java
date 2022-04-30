@@ -1,6 +1,6 @@
 package com.example.miniprogramme_springboot.domain;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Books extends BooksKey {
 
