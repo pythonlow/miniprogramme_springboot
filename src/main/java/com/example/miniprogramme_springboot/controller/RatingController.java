@@ -1,5 +1,7 @@
 package com.example.miniprogramme_springboot.controller;
 
+import com.example.miniprogramme_springboot.domain.Rating;
+import com.example.miniprogramme_springboot.service.RatingService;
 import com.example.miniprogramme_springboot.service.impl.BooksServiceimpl;
 import com.example.miniprogramme_springboot.service.impl.RatingServiceimpl;
 import org.apache.ibatis.annotations.Param;
@@ -26,4 +28,16 @@ public class RatingController {
         return ratingService.getRating(params);
     }
 
+    @RequestMapping(value = "/insertRating")
+    public Object insertRating(String rating,String bid,String comments,String uid){
+        Integer score=Integer.parseInt(rating);
+        Integer bid1 = Integer.parseInt(bid);
+        Integer uid1 = Integer.parseInt(uid);
+        return ratingService.insertRating(score,bid1,uid1,comments);
+//        System.out.println(rating+bid+comments+uid);
+    }
+    @RequestMapping(value = "/getRatingByUid")
+    public Object getRatingByUid (@RequestParam("params")int params){
+        return ratingService.getRatingByUid(params);
+    }
 }

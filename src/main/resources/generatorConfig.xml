@@ -41,6 +41,9 @@
 <!--        <table tableName="books" domainObjectName="Books" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>-->
 <!--        <table tableName="recommend" domainObjectName="Recommend" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>-->
 <!--        <table tableName="usercfrecommend" domainObjectName="UsercfRecommend" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>-->
-        <table tableName="user" domainObjectName="User" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>
+<!--        <table tableName="user" domainObjectName="User" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>-->
+<!--        <table tableName="favorites" domainObjectName="Favorites" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>-->
+<!--        <table tableName="orders" domainObjectName="Orders" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>-->
+        <table tableName="ordersitem" domainObjectName="Ordersitem" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>
     </context>
 </generatorConfiguration>

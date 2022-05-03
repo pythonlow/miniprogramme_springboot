@@ -24,4 +24,8 @@ public interface RatingMapper {
     List getRatingByBid(@Param(value = "bid")int params);
 
     List getRating(@Param(value = "bid") int params);
+
+    Integer insertRating(@Param(value = "score") Integer score,@Param(value = "bid1") Integer bid1,@Param(value = "uid1") Integer uid1,@Param(value = "comments") String comments);
+
+    List getRatingByUid(@Param(value = "uid") int params);
 }

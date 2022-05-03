@@ -28,18 +28,10 @@ public class BooksController {
 
     @RequestMapping(value = "/getrecommendBook", method = RequestMethod.GET)
     public Object getrecommendBook(@RequestParam("params") int[] params) {
-//        System.out.println(Arrays.toString(params));
         return booksService.getrecommendBook(params);
     }
 
     @RequestMapping(value = "/getBookById",method = RequestMethod.GET)
     public Object getBookById(@RequestParam("params") int params){return booksService.getBookById(params);}
 
-//    @RequestMapping(value = "recommendBookById",method = RequestMethod.GET)
-//    public Integer recommendBookById(@RequestParam("params") int [] params) {
-//        ItemCB_1 cb = new ItemCB_1();
-//        Map<Integer,Double>simList= cb.getItemCB(params);
-////        System.out.println(simList);
-//        return booksService.getrecommendBookById(simList);
-//    }
 }

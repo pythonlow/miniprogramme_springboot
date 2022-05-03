@@ -1,11 +1,21 @@
 package com.example.miniprogramme_springboot.domain;
 
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Rating {
     private Date time;
     private User user;
+
+    public void setBooks(Books books) {
+        this.books = books;
+    }
+
+    public Books getBooks() {
+        return books;
+    }
+
+    private Books books;
     public void setTime(Date time) {
         this.time = time;
     }

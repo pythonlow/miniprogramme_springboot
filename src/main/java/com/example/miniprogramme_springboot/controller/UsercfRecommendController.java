@@ -33,7 +33,7 @@ public class UsercfRecommendController {
         extratdata.extractdata();
         UserCF_1 usercf = new UserCF_1();
         Map<Long,Float> simList= usercf.getusercf(params);
-        System.out.println(simList);
+//        System.out.println(simList);
         return usercfRecommendService.insertUsercf(simList);
 
     }

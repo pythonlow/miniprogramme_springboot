@@ -9,4 +9,5 @@ public interface RatingService {
 
     List<Rating> getRatingByBid(int params);
     List<Rating> getRating(int params);
+    List<Rating> getRatingByUid(int params);
 }

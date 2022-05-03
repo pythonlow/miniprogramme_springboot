@@ -1,7 +1,6 @@
 package com.example.miniprogramme_springboot.service.impl;
 
 import com.example.miniprogramme_springboot.dao.RatingMapper;
-import com.example.miniprogramme_springboot.domain.Books;
 import com.example.miniprogramme_springboot.domain.Rating;
 import com.example.miniprogramme_springboot.service.RatingService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,5 +21,13 @@ public class RatingServiceimpl implements RatingService {
     @Override
     public List<Rating> getRating(int params) {
         return ratingMapper.getRating(params);
+    }
+
+    public Integer insertRating(Integer score, Integer bid1, Integer uid1, String comments) {
+        return ratingMapper.insertRating(score,bid1,uid1,comments);
+    }
+
+    public List<Rating> getRatingByUid(int params) {
+        return ratingMapper.getRatingByUid(params);
     }
 }
