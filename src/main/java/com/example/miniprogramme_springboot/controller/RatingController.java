@@ -40,4 +40,21 @@ public class RatingController {
     public Object getRatingByUid (@RequestParam("params")int params){
         return ratingService.getRatingByUid(params);
     }
+
+    @RequestMapping(value = "/deleteRating")
+    public Object deleteRating(@RequestParam("id") int id){
+        return ratingService.deleteRating(id);
+    }
+
+    @RequestMapping(value = "/getRatingWithPager")
+    public Object getRatingWithPager(String pageNum,String pageSize){
+        Integer pagenum = Integer.parseInt(pageNum);
+        Integer pagesize = Integer.parseInt(pageSize);
+        return ratingService.getRatingWithPager(pagenum,pagesize);
+    }
+
+    @RequestMapping(value = "getRatingRank")
+    public Object getRatingRank(){
+        return ratingService.getRatingRank();
+    }
 }

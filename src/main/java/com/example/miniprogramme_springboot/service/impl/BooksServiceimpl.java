@@ -27,6 +27,30 @@ public class BooksServiceimpl implements BooksService {
     public List<Books> getBookById(int params) {return booksMapper.getBookById(params);
     }
 
+    public List<Books> getBookWithPager(int pagenum, int pagesize) {
+        return booksMapper.getBookWithPager(pagenum,pagesize);
+    }
+
+    public Integer updateBook(Books books) {
+        return booksMapper.updateBook(books);
+    }
+
+    public Integer insertBook(Books books) {
+        return booksMapper.insertBook(books);
+    }
+
+    public Integer deleteBook(int id) {
+        return booksMapper.deleteBook(id);
+    }
+
+    public List<Books> searchBook(String params) {
+        return booksMapper.searchBook(params);
+    }
+
+    public List<Books> getBookByTag(String tag) {
+        return booksMapper.getBookByTag(tag);
+    }
+
 //    @Override
 //    public Integer getrecommendBookById(Map<Integer, Double> simList) {
 //        return booksMapper.getrecommendBookById(simList);

@@ -12,4 +12,6 @@ public interface OrdersitemMapper {
     int insertSelective(Ordersitem record);
 
     List getordersitembyid(@Param(value = "orderid") int params);
+
+    List getordersitemrank();
 }

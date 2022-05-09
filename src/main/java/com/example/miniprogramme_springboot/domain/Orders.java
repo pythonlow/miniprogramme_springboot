@@ -5,6 +5,15 @@ import java.sql.Date;
 public class Orders {
     private Books books;
 
+    public Ordersitem getOrdersitem() {
+        return ordersitem;
+    }
+
+    public void setOrdersitem(Ordersitem ordersitem) {
+        this.ordersitem = ordersitem;
+    }
+
+    private Ordersitem ordersitem;
     public String getU_name() {
         return u_name;
     }
@@ -13,17 +22,17 @@ public class Orders {
         this.u_name = u_name;
     }
 
-    public String getDress() {
-        return dress;
+    public String getAdress() {
+        return adress;
     }
 
-    public void setDress(String dress) {
-        this.dress = dress;
+    public void setAdress(String adress) {
+        this.adress = adress;
     }
 
     private Integer state;
     private String u_name;
-    private String dress;
+    private String adress;
     public Integer getState() {
         return state;
     }

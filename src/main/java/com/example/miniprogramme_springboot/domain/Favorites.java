@@ -3,7 +3,25 @@ package com.example.miniprogramme_springboot.domain;
 import java.sql.Date;
 
 public class Favorites {
+    private Integer count;
     private Books books;
+    private Integer total;
+
+    public Integer getCount() {
+        return count;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
+    }
+
+    public Integer getTotal() {
+        return total;
+    }
+
+    public void setTotal(Integer total) {
+        this.total = total;
+    }
 
     public Books getBooks() {
         return books;

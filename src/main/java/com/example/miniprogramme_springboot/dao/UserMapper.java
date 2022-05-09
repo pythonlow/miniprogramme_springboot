@@ -1,6 +1,9 @@
 package com.example.miniprogramme_springboot.dao;
 
 import com.example.miniprogramme_springboot.domain.User;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface UserMapper {
     /**
@@ -50,4 +53,8 @@ public interface UserMapper {
      * @mbggenerated
      */
     int updateByPrimaryKey(User record);
+
+    List getUserWithPager(@Param(value = "pagenum") Integer pagenum, @Param(value = "pagesize") Integer pagesize);
+
+    List getUserRank();
 }

@@ -21,10 +21,10 @@ public class Split {
         CharTermAttribute term=ts.getAttribute(CharTermAttribute.class);
         while(ts.incrementToken()){
 //            if(!sim.delUseless(term.toString())){
-                System.out.print(term + "|");
+//                System.out.print(term + "|");
 //            }
         }
-        System.out.println();
+//        System.out.println();
         analyzer.close();
         reader.close();
     }

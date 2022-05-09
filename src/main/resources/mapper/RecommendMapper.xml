@@ -16,6 +16,8 @@
       <result column="title" property="title" jdbcType="VARCHAR" />
       <result column="cover" property="cover" jdbcType="VARCHAR" />
       <result column="price" property="price" jdbcType="REAL" />
+      <result column="author" property="author" jdbcType="VARCHAR" />
+      <result column="publisher" property="publisher" jdbcType="VARCHAR" />
     </association>
   </resultMap>
   <sql id="Base_Column_List" >
@@ -43,7 +45,7 @@
     select * from recommend a
     join books b on a.b_id=b.id
     order by a.time desc
-    limit 5
+    limit 7
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     <!--

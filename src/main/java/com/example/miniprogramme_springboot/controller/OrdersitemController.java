@@ -20,4 +20,9 @@ public class OrdersitemController {
     public Object getordersitembyid(@RequestParam(value = "params")int params){
         return ordersitemService.getordersitembyid(params);
     }
+
+    @RequestMapping(value = "getordersitemrank",method = RequestMethod.GET)
+    public Object getordersitemrank(){
+        return ordersitemService.getordersitemrank();
+    }
 }

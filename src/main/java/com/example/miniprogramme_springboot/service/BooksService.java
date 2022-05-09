@@ -13,5 +13,5 @@ public interface BooksService {
     List<Books> getBook();
     List<Books> getrecommendBook(int[] params);
     List<Books> getBookById( int params);
-//    List<Books> getrecommendById(Map<Integer,Double> simList);
+//    List<Books> getBookWithPager(int pagenum,int pagesize);
 }

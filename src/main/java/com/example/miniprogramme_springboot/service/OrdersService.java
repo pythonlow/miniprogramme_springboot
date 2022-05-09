@@ -8,4 +8,6 @@ import java.util.List;
 public interface OrdersService {
     List<Orders> getordersbyuid(int params);
     List<Orders> getorders();
+    Integer backorders(int params);
+    Integer checkorders(int params);
 }

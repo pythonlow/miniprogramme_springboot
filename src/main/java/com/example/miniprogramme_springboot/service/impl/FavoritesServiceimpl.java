@@ -29,4 +29,16 @@ public class FavoritesServiceimpl implements FavoritesService {
     public Integer deletefavorites(Integer bid1, Integer uid1) {
         return favoritesMapper.deletefavorites(bid1,uid1);
     }
+
+    public List<Favorites> getallfavorites(Integer pagenum, Integer pagesize) {
+        return favoritesMapper.getallfavorites(pagenum,pagesize);
+    }
+
+    public List<Favorites> getfavoritesdata() {
+        return favoritesMapper.getfavoritesdata();
+    }
+
+    public List<Favorites> getfavoritesrank() {
+        return favoritesMapper.getfavoritesrank();
+    }
 }

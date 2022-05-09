@@ -4,6 +4,34 @@ package com.example.miniprogramme_springboot.domain;
 import java.sql.Date;
 
 public class Rating {
+    public Integer getScore() {
+        return score;
+    }
+
+    public void setScore(Integer score) {
+        this.score = score;
+    }
+
+    public Integer getCount() {
+        return count;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
+    }
+
+    private Integer score;
+    private Integer count;
+    private Integer total;
+
+    public Integer getTotal() {
+        return total;
+    }
+
+    public void setTotal(Integer total) {
+        this.total = total;
+    }
+
     private Date time;
     private User user;
 

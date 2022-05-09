@@ -21,4 +21,19 @@ public class OrdersServiceimpl implements OrdersService {
     public List<Orders> getorders() {
         return ordersMapper.getorders();
     }
+
+    public Integer backorders(int params) {
+        return ordersMapper.backorders(params);
+    }
+
+    public Integer checkorders(int params) {
+        return ordersMapper.checkorders(params);
+    }
+
+    public Integer insertorders() {return ordersMapper.insertorders();
+    }
+
+//    public List<Orders> getordersrank() {
+//        return ordersMapper.getordersrank();
+//    }
 }

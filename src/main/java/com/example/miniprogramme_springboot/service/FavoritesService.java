@@ -8,4 +8,5 @@ public interface FavoritesService {
     List<Favorites> getfavorites(int params);
     List <Favorites>getislike(Integer bid1, Integer uid1);
     Integer insertfavorites(Integer bid1, Integer uid1);
+
 }

@@ -28,4 +28,10 @@ public interface RatingMapper {
     Integer insertRating(@Param(value = "score") Integer score,@Param(value = "bid1") Integer bid1,@Param(value = "uid1") Integer uid1,@Param(value = "comments") String comments);
 
     List getRatingByUid(@Param(value = "uid") int params);
+
+    Integer deleteRating(@Param(value = "id") int id);
+
+    List getRatingWithPager(@Param(value = "pagenum") Integer pagenum, @Param(value = "pagesize") Integer pagesize);
+
+    List getRatingRank();
 }

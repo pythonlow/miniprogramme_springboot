@@ -25,4 +25,20 @@ public class OrdersController {
         return ordersServiceimpl.getorders();
     }
 
+    @RequestMapping(value = "backorders",method = RequestMethod.GET)
+    public Object backorders(@RequestParam(value = "params")int params){
+        return ordersServiceimpl.backorders(params);}
+
+    @RequestMapping(value = "checkorders",method = RequestMethod.GET)
+    public Object checkorders(@RequestParam(value = "params")int params){
+        return ordersServiceimpl.checkorders(params);
+    }
+
+    @RequestMapping(value = "insertorders",method = RequestMethod.GET)
+    public Object insertorders(){
+        return ordersServiceimpl.insertorders();
+    }
+
+//    @RequestMapping(value = "getordersrank",method = RequestMethod.GET)
+//    public Object getordersrank(){return ordersServiceimpl.getordersrank();}
 }

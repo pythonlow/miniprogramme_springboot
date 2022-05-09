@@ -30,4 +30,16 @@ public class RatingServiceimpl implements RatingService {
     public List<Rating> getRatingByUid(int params) {
         return ratingMapper.getRatingByUid(params);
     }
+
+    public Integer deleteRating(int id) {
+        return ratingMapper.deleteRating(id);
+    }
+
+    public List<Rating> getRatingWithPager(Integer pagenum, Integer pagesize) {
+        return ratingMapper.getRatingWithPager(pagenum,pagesize);
+    }
+
+    public List<Rating> getRatingRank() {
+        return ratingMapper.getRatingRank();
+    }
 }

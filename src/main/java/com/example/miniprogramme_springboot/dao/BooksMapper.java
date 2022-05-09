@@ -23,5 +23,17 @@ public interface BooksMapper {
 
     List getBookById(@Param(value = "bid") int params);
 
+    List getBookWithPager(@Param(value = "pagenum") Integer pagenum, @Param(value = "pagesize") Integer pagesize);
+
+    Integer updateBook(Books books);
+
+    Integer insertBook(Books books);
+
+    Integer deleteBook(@Param(value = "bid") int id);
+
+    List searchBook(@Param(value = "params") String params);
+
+    List getBookByTag(@Param(value = "tag") String tag);
+
 //    Integer getrecommendBookById(@Param(value = "simList") Map<Integer, Double> simList);
 }

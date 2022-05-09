@@ -28,4 +28,10 @@ public interface FavoritesMapper {
     Integer insertfavorites(@Param(value = "bid") Integer bid1, @Param(value = "uid") Integer uid1);
 
     Integer deletefavorites(@Param(value = "bid") Integer bid1, @Param(value = "uid") Integer uid1);
+
+    List getallfavorites(@Param(value = "pagenum") Integer pagenum, @Param(value = "pagesize") Integer pagesize);
+
+    List getfavoritesdata();
+
+    List getfavoritesrank();
 }

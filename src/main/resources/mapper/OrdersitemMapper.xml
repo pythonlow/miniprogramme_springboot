@@ -13,11 +13,20 @@
     <result column="discount" jdbcType="REAL" property="discount" />
     <result column="unitprice" jdbcType="REAL" property="unitprice" />
     <result column="totalprice" jdbcType="REAL" property="totalprice" />
+    <result column="count" jdbcType="INTEGER" property="count"/>
     <association property="books" javaType="books">
       <id column="b_id" property="id" jdbcType="INTEGER" />
       <result column="title" property="title" jdbcType="VARCHAR" />
       <result column="cover" property="cover" jdbcType="VARCHAR"/>
       <result column="price" property="price" jdbcType="REAL"/>
+    </association>
+    <association property="orders" javaType="orders">
+      <id column="id" property="id" jdbcType="INTEGER" />
+      <result column="u_id" property="uId" jdbcType="INTEGER" />
+      <result column="time" property="time" jdbcType="TIMESTAMP" />
+      <result column="state" property="state" jdbcType="INTEGER" />
+      <result column="u_name" property="u_name" jdbcType="VARCHAR" />
+      <result column="adress" property="adress" jdbcType="VARCHAR" />
     </association>
   </resultMap>
   <insert id="insert" parameterType="com.example.miniprogramme_springboot.domain.Ordersitem">
@@ -88,6 +97,16 @@
   <select id="getordersitembyid" resultMap="BaseResultMap" parameterType="com.example.miniprogramme_springboot.domain.Ordersitem">
     select * from ordersitem a
     join books b on a.b_id=b.id
+    join orders c on a.orderid=c.id
     where orderid=#{orderid}
+  </select>
+  <select id="getordersitemrank" resultMap="BaseResultMap" parameterType="com.example.miniprogramme_springboot.domain.Ordersitem">
+    select a.*,count(*) as count,b.state,c.title from ordersitem a
+    join orders b on a.orderid=b.id
+    join books c on a.b_id = c.id
+    where b.state in (1,2)
+    group by a.b_id
+    order by count desc
+    limit 50
   </select>
 </mapper>

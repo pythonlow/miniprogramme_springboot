@@ -30,6 +30,21 @@ public class ShoppingcarController {
         return shoppingcarService.getrecommendBook(simList);
     }
 
+    @RequestMapping(value="insertshoppingcar",method = RequestMethod.GET)
+    public Object insertshoppingcar(@RequestParam("params")int params){
+        return shoppingcarService.insertshoppingcar(params);
+    }
 
+    @RequestMapping(value="updateshoppingcar",method = RequestMethod.GET)
+    public Object updateshoppingcar(String bid,String amount){
+        Integer params1 = Integer.parseInt(bid);
+        Integer params2 = Integer.parseInt(amount);
+        return shoppingcarService.updateshoppingcar(params1,params2);
+    }
+
+    @RequestMapping(value = "deleteshoppingcar",method = RequestMethod.GET)
+    public Object deleteshoppingcar(@RequestParam("params")int params){
+        return shoppingcarService.deleteshoppingcar(params);
+    }
 
 }

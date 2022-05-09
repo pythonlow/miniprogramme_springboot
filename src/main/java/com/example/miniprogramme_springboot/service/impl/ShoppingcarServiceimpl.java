@@ -25,6 +25,18 @@ public class ShoppingcarServiceimpl implements ShoppingcarService {
         return shoppingcarMapper.getrecommendBook(simList);
     }
 
+    public Integer insertshoppingcar(int params) {
+        return shoppingcarMapper.insertshoppingcar(params);
+    }
+
+    public Integer updateshoppingcar(int params1, int params2) {
+        return  shoppingcarMapper.updateshoppingcar(params1,params2);
+    }
+
+    public Integer deleteshoppingcar(int params) {
+        return shoppingcarMapper.deleteshoppingcar(params);
+    }
+
 
 //    @Override
 //    public List<Shoppingcar> recommendBook() { return shoppingcarMapper.recommendBook();

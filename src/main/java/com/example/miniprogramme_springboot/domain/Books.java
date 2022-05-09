@@ -3,8 +3,16 @@ package com.example.miniprogramme_springboot.domain;
 import java.sql.Date;
 
 public class Books extends BooksKey {
-
+    private Integer total;
     private String cover;
+
+    public Integer getTotal() {
+        return total;
+    }
+
+    public void setTotal(Integer total) {
+        this.total = total;
+    }
 
     private String author;
 

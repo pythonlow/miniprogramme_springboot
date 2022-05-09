@@ -3,6 +3,16 @@ package com.example.miniprogramme_springboot.domain;
 import java.util.List;
 
 public class Ordersitem {
+    private Integer count;
+
+    public Integer getCount() {
+        return count;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
+    }
+
     public Orders getOrders() {
         return orders;
     }

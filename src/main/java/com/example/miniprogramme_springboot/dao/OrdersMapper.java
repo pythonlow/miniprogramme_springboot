@@ -58,4 +58,12 @@ public interface OrdersMapper {
     List getordersbyuid(@Param(value = "uid") int params);
 
     List getorders();
+
+    Integer backorders(@Param(value = "orderid") int params);
+
+    Integer checkorders(@Param(value = "orderid") int params);
+
+    Integer insertorders();
+
+//    List getordersrank();
 }

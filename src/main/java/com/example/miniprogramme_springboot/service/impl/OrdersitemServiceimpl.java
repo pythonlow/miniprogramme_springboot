@@ -18,4 +18,8 @@ public class OrdersitemServiceimpl implements OrdersitemService {
     public List<Ordersitem> getordersitembyid(int params) {
         return ordersitemMapper.getordersitembyid(params);
     }
+
+    public List<Ordersitem> getordersitemrank() {
+        return ordersitemMapper.getordersitemrank();
+    }
 }

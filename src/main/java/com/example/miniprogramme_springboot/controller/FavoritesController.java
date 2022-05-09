@@ -40,4 +40,19 @@ public class FavoritesController {
         return favoritesService.deletefavorites(bid1,uid1);
     }
 
+    @RequestMapping(value = "getallfavorites",method = RequestMethod.GET)
+    public Object getallfavorites(String pageNum,String pageSize){
+        Integer pagenum = Integer.parseInt(pageNum);
+        Integer pagesize = Integer.parseInt(pageSize);
+        return favoritesService.getallfavorites(pagenum,pagesize);
+    }
+
+    @RequestMapping(value = "getfavoritesdata",method = RequestMethod.GET)
+    public Object getfavorites(){
+        return favoritesService.getfavoritesdata();
+    }
+
+
+    @RequestMapping(value = "getfavoritesrank",method = RequestMethod.GET)
+    public Object getfavoritesrank(){return favoritesService.getfavoritesrank();}
 }
